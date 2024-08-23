@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+// import {
+//   Avatar,
+//   AvatarFallback,
+//   AvatarImage,
+// } from "@/components/ui/avatar";
+
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -16,7 +22,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="border-b">
+          <div className="flex h-16 items-center px-4 container mx-auto">
+            SAMAD PHOTO APP
+            <div className="ml-auto flex items-center space-x-4">
+              
+
+
+            </div>
+          </div>
+        </div>
+
+        {children}
+      </body>
     </html>
   );
 }
